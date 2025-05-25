@@ -1,50 +1,55 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Guía de CPUs</title>
-  <link rel="stylesheet" href="estilos.css">
-  <script src="cpu.js"></script>
-</head>
-<body>
-  <div id="cpu" class="component-details">
-    <div class="component-title">
-      <h2>Procesador (CPU)</h2>
-    </div>
-    <div class="component-content">
-      <p>El **cerebro de tu PC** es el **procesador (CPU)**. Determina el rendimiento general del sistema y lo rápido que puede ejecutar tareas. Es el encargado de procesar todas las instrucciones y datos que le envían los programas y los demás componentes.</p>
-      <p>Una CPU potente es crucial para cualquier PC, ya sea que la uses para **juegos de última generación**, **edición de video en 4K**, **diseño gráfico complejo**, o simplemente para tener una experiencia fluida al navegar por internet y trabajar con aplicaciones de oficina. Piensa en ella como la pieza central que coordina y gestiona todo lo que ocurre en tu ordenador.</p>
-      <h3>Aspectos Clave a Considerar:</h3>
+  <head>
+    <meta charset="UTF-8">
+    <title>Guía de Construcción de PCs</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="pcs_script.js"></script>
+  </head>
+  <body>
+<div class="flexible-container">
+  <img src="causatechlogo.png" alt="Logo de Causa Tech" class="logo-img">
+  <h1 class="site-title">Causa Tech — Guía de Construcción de PCs</h1>
+</div>
+    <nav class="main-nav">
       <ul>
-          <li>**Núcleos e Hilos:** Más núcleos y hilos suelen significar mejor rendimiento en tareas que pueden dividirse en paralelo (como la edición de video o el renderizado 3D). Para juegos, la frecuencia por núcleo suele ser más importante.</li>
-          <li>**Frecuencia (GHz):** Indica la velocidad a la que el procesador puede ejecutar instrucciones. Una mayor frecuencia generalmente se traduce en un rendimiento más rápido en tareas de un solo hilo.</li>
-          <li>**Caché:** Es una pequeña cantidad de memoria muy rápida integrada en la CPU que almacena datos de uso frecuente para un acceso más rápido.</li>
-          <li>**Compatibilidad (Socket):** Cada CPU tiene un tipo de socket específico que debe coincidir con el de la placa base. Por ejemplo, los procesadores Intel actuales usan sockets como LGA1700, mientras que los AMD más recientes usan AM5.</li>
-          <li>**Gráficos Integrados:** Algunos CPUs vienen con una GPU incorporada (conocidos como APUs en AMD o con "gráficos integrados" en Intel). Son ideales para PCs de oficina o de bajo presupuesto que no requieren una tarjeta gráfica dedicada.</li>
-          <li>**Consumo de Energía (TDP):** Indica la cantidad máxima de calor que el procesador puede generar y, por lo tanto, la potencia que consume. Esto es importante para elegir un disipador adecuado.</li>
+        <li><a id="inicio.html" class="active" onclick="setActiveLink(this)">Inicio</a></li>
+        <li><a id="calculadora.html" onclick="setActiveLink(this)">Calculadora</a></li>
+        <li><a id="componentes.html" onclick="setActiveLink(this)">Componentes</a></li>
+        <li><a id="guia.html" onclick="setActiveLink(this)">Guia paso a paso</a></li>
       </ul>
-      <p>Elegir la CPU adecuada es un equilibrio entre tus necesidades, tu presupuesto y la compatibilidad con otros componentes. Un procesador de gama media es suficiente para la mayoría de los usuarios, mientras que los creadores de contenido y los gamers entusiastas se beneficiarán de modelos de gama alta.</p>
-      <div class="comparison-tool">
-        <h3>Comparador de CPUs</h3>
-        <select id="cpu1" onchange="compareCPUs()">
-          <option value="">Selecciona CPU 1</option>
-          <option value="i5-13600K">Intel Core i5-13600K</option>
-          <option value="r7-5800X">AMD Ryzen 7 5800X</option>
-          <option value="i9-13900K">Intel Core i9-13900K</option>
-          <option value="r9-7950X">AMD Ryzen 9 7950X</option>
-        </select>
-        <select id="cpu2" onchange="compareCPUs()">
-          <option value="">Selecciona CPU 2</option>
-          <option value="i5-13600K">Intel Core i5-13600K</option>
-          <option value="r7-5800X">AMD Ryzen 7 5800X</option>
-          <option value="i9-13900K">Intel Core i9-13900K</option>
-          <option value="r9-7950X">AMD Ryzen 9 7950X</option>
-        </select>
-        <div id="cpu-comparison-result" class="comparison-result"></div>
+    </nav>
+    <main>
+      <iframe src="inicio.html" name="contenido-frame" style="width:100%; height:80vh; border:none;"></iframe>
+    </main>
+    <footer class="site-footer">
+      <div class="footer-content">
+        <div class="footer-section">
+          <h3>CausaTech</h3>
+          <p>Tu guía definitiva para construir y optimizar tu PC.</p>
+          <div class="social-icons">
+            <a href="#" class="social-icon"><img src="icons/facebook.svg" alt="Facebook"></a>
+            <a href="#" class="social-icon"><img src="icons/twitter.svg" alt="Twitter"></a>
+            <a href="#" class="social-icon"><img src="icons/instagram.svg" alt="Instagram"></a>
+            <a href="#" class="social-icon"><img src="icons/youtube.svg" alt="YouTube"></a>
+          </div>
+        </div>
+        
+        <div class="footer-section">
+          <h3>Contacto</h3>
+          <table class="contact-info">
+            <tr>
+              <th><i class="icon">📧</i> info@causatech.com</th>
+              <th><i class="icon">📱</i> +34 123 456 789</th>
+              <th><i class="icon">📍</i> Madrid, España</th>
+            </tr>
+          </table>
+        </div>
       </div>
-    </div>
-  </div>
-
-  <script src="js/cpu.js"></script>
-</body>
+      
+      <div class="footer-bottom">
+        <p>&copy; 2023 CausaTech. Todos los derechos reservados. | <a href="privacidad.html">Política de Privacidad</a> | <a href="terminos.html">Términos de Servicio</a></p>
+      </div>
+    </footer>
+  </body>
 </html>
