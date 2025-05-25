@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Guía de Tarjetas Gráficas</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="gpu.js"></script>
+</head>
+<body>
+  <div id="gpu" class="component-details">
+    <div class="component-title">
+      <h2>Tarjeta Gráfica (GPU)</h2>
+    </div>
+    <div class="component-content">
+      <p>El corazón del rendimiento gráfico.</p>
+      <div class="gpu-selector">
+        <h3>Selector de GPU por Resolución</h3>
+        <div class="resolution-options">
+          <button onclick="recommendGPU('1080p')">1080p</button>
+          <button onclick="recommendGPU('1440p')">1440p</button>
+          <button onclick="recommendGPU('4k')">4K</button>
+        </div>
+        <div id="gpu-recommendation"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/gpu.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Guía de Placas Base</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="motherboard.js"></script>
+</head>
+<body>
+  <div id="motherboard" class="component-details">
+    <div class="component-title">
+      <h2>Placa Base (Motherboard)</h2>
+    </div>
+    <div class="component-content">
+      <p>La base que conecta todos tus componentes.</p>
+      <div class="compatibility-check">
+        <h3>Verificador de Compatibilidad</h3>
+        <label for="selected-cpu">Selecciona tu CPU:</label>
+        <select id="selected-cpu">
+          <option value="intel">Intel</option>
+          <option value="amd">AMD</option>
+        </select>
+        <button onclick="checkCompatibility()">Verificar Compatibilidad</button>
+        <p id="compatibility-result"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/motherboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Guía de Memoria RAM</title>
+  <link rel="stylesheet" href="estilos.css">
+  <script src="ram.js"></script>
+</head>
+<body>
+  <div id="ram" class="component-details">
+    <div class="component-title">
+      <h2>Memoria RAM</h2>
+    </div>
+    <div class="component-content">
+      <p>La memoria de corto plazo de tu sistema.</p>
+      <div class="ram-calculator">
+        <h3>Calculadora de RAM</h3>
+        <label for="ram-usage">Selecciona tu uso principal:</label>
+        <select id="ram-usage" onchange="calculateRam()">
+          <option value="basic">Navegación web/Oficina</option>
+          <option value="gaming">Gaming</option>
+          <option value="video">Edición de video</option>
+          <option value="3d">Modelado 3D</option>
+        </select>
+        <div id="ram-recommendation"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="js/ram.js"></script>
+</body>
+</html>

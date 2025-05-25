@@ -1,0 +1,394 @@
+body {
+  background-color: white;
+  color: #333;
+  /*line-height: 1.6;*/
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+.page-header-div{
+  min-height: 10vh; /* Vertical height */
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #333;
+}
+
+.component-section {
+  min-height: 20vh; /* Vertical height */
+  padding: 10px 20px 40px;
+  margin: 3%;
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid white;
+  color: white;
+  border-radius: 15px;
+  /*So astetic*/
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  background: linear-gradient(135deg, #c0392b 0%, #e74c3c 100%);
+}
+
+.component-section:hover {
+    transform: scale(1.05); 
+    box-shadow: 0 15px 15px rgba(0,0,0,0.2); 
+    transition: 0.5s; /*Delay de la transicion*/
+}
+
+.component-title{
+  /*align-items: top;*/
+  margin: 2%;
+  background-color: white;
+  border-radius: 15px;
+  color: #333;
+  text-align: center;
+}
+
+.component-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: left;
+}
+
+h1 {
+  font-size: 2.5em;
+  font-weight: 700;
+  border-bottom: 2px solid brown;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 600;
+  color: #333;
+}
+
+/*CHECK ALL THIS*/
+
+.main-nav {
+  background: linear-gradient(90deg, #c0392b, #e74c3c);
+  padding: 10px 20px;
+  border-radius: 15px;
+  margin: 2%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.main-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.main-nav li {
+  margin: 0 15px;
+}
+
+.main-nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 8px 12px;
+  /*transition: background 0.3s, color 0.3s;*/
+  border-radius: 10px;
+}
+
+.main-nav a:hover {
+  background-color: white;
+  color: #c0392b;
+}
+
+.flexible-container{
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+  margin: 2%;
+  background: linear-gradient(90deg, #c0392b, #e74c3c);
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  color: white;
+  flex-wrap: wrap;
+}
+
+.logo-img {
+  width: 80px;
+  height: auto;
+  border-radius: 10px;
+  background-color: white;
+  padding: 5px;
+}
+
+/*Aplica a los elementos a(links)
+ dentro del navegador cuando 
+ tienen la clase active*/
+.main-nav a.active { 
+  background-color: white;
+  color: #c0392b;
+}
+
+.component-details {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+}
+
+/* Styles for Form Elements (Inputs, Buttons, Labels) */
+
+/* General label styles */
+label {
+    display: block; /* Makes labels appear on their own line */
+    margin-bottom: 8px; /* Space below each label */
+    font-weight: 600; /* Slightly bolder text for readability */
+    color: #333; /* Matches the color of other general text */
+    font-size: 1.05em; /* Slightly larger font size */
+}
+
+/* Styles for text inputs, number inputs, and text areas */
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea {
+    width: calc(100% - 24px); /* Full width minus padding and border */
+    padding: 10px 12px; /* Padding inside the input fields */
+    margin-bottom: 18px; /* Space below each input/textarea */
+    border: 1px solid #ccc; /* Light gray border */
+    border-radius: 8px; /* Slightly rounded corners for a modern look */
+    font-family: 'Segoe UI', Arial, sans-serif; /* Inherit global font */
+    font-size: 1em; /* Standard font size */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+    transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for focus */
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+    border-color: #e74c3c; /* Red border on focus */
+    outline: none; /* Remove default outline */
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.4); /* Subtle red shadow on focus */
+}
+
+textarea {
+    resize: vertical; /* Allows vertical resizing by the user */
+    min-height: 80px; /* Minimum height for text areas */
+}
+
+/* Styles for buttons */
+button[type="submit"], /* Apply to submit buttons specifically */
+.calculator-controls button, /* Buttons in the budget calculator */
+.compatibility-check button, /* Button in compatibility checker */
+.gpu-selector button { /* Buttons in the GPU selector */
+    background-color: #e74c3c; /* Your primary red color */
+    color: white; /* White text on buttons */
+    padding: 12px 25px; /* Generous padding for clickable area */
+    border: none; /* No border for buttons */
+    border-radius: 10px; /* Rounded corners, slightly more than inputs */
+    cursor: pointer; /* Indicate it's clickable */
+    font-size: 1.1em; /* Slightly larger font for prominence */
+    font-weight: 600; /* Bold text */
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease; /* Smooth transitions */
+    margin-top: 10px; /* Space above buttons if they follow inputs */
+    display: inline-block; /* Allows side-by-side if needed, but keeps padding */
+}
+
+button[type="submit"]:hover,
+.calculator-controls button:hover,
+.compatibility-check button:hover,
+.gpu-selector button:hover {
+    background-color: #c0392b; /* Darker red on hover */
+    transform: translateY(-2px); /* Slight lift effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow on hover */
+}
+
+/* Specific style for the range input for storage */
+input[type="range"] {
+    width: 100%; /* Full width */
+    height: 8px; /* Height of the track */
+    background: #ddd; /* Light grey track background */
+    border-radius: 5px; /* Rounded track */
+    outline: none; /* Remove focus outline */
+    margin-bottom: 15px; /* Space below */
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Remove default thumb style */
+    appearance: none;
+    width: 20px; /* Size of the thumb */
+    height: 20px;
+    background: #e74c3c; /* Red thumb */
+    border-radius: 50%; /* Circular thumb */
+    cursor: grab; /* Indicate draggable */
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #c0392b; /* Darker red on hover */
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    background: #e74c3c;
+    border-radius: 50%;
+    cursor: grab;
+    border: none; /* Remove default Firefox border */
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background: #c0392b;
+}
+
+/* Styles for select dropdowns */
+select {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    font-size: 1em;
+    background-color: white;
+    cursor: pointer;
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url('data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23666%22%20d%3D%22M287%20197.8c-3.2%203.2-8.3%203.2-11.6%200L146.2%2073.7%2017%20197.8c-3.2%203.2-8.3%203.2-11.6%200-3.2-3.2-3.2-8.3%200-11.6l135.9-135.9c3.2-3.2%208.3-3.2%2011.6%200l135.9%20135.9c3.2%203.2%203.2%208.4%200%2011.6z%22/%3E%3C/svg%3E'); /* Custom dropdown arrow */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 12px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+select:focus {
+    border-color: #e74c3c;
+    outline: none;
+    box-shadow: 0 0 5px rgba(231, 76, 60, 0.4);
+}
+
+/* Estilos para el footer */
+.site-footer {
+  background: linear-gradient(135deg, #8e0e00 0%, #c0392b 100%);
+  color: white;
+  padding: 40px 0 0;
+  margin-top: 50px;
+  box-shadow: 0 -5px 15px rgba(0,0,0,0.1);
+}
+
+.footer-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  padding: 0 15px;
+}
+
+.footer-section h3 {
+  color: white;
+  font-size: 1.4em;
+  margin-bottom: 20px;
+  position: relative;
+  padding-bottom: 10px;
+}
+
+.footer-section h3::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 50px;
+  height: 2px;
+  background: white;
+}
+
+.footer-section p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.3s;
+}
+
+.social-icon:hover img {
+  transform: translateY(-3px);
+}
+
+.footer-links li {
+  margin-bottom: 10px;
+}
+
+.footer-links a, .contact-info {
+  color: #f0f0f0;
+  text-decoration: none;
+  transition: color 0.3s, padding-left 0.3s;
+}
+
+.footer-links a:hover {
+  color: white;
+  padding-left: 5px;
+}
+
+.contact-info li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.icon {
+  font-size: 1.2em;
+}
+
+.footer-bottom {
+  background: rgba(0, 0, 0, 0.2);
+  text-align: center;
+  padding: 15px 0;
+  margin-top: 30px;
+}
+
+.footer-bottom p {
+  margin: 0;
+  font-size: 0.9em;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.footer-bottom a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: #f0f0f0;
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer-content {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .footer-section {
+    margin-bottom: 20px;
+  }
+  
+  .footer-section h3 {
+    font-size: 1.2em;
+  }
+}
